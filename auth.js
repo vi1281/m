@@ -15,32 +15,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Отримую кнопки для входу та реєстрації
+// Get buttons
 const loginButton = document.getElementById('login');
 const registerButton = document.getElementById('register');
 
-// Додаю слухач події для кнопки входу
+// Event listener for login
 loginButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Запобігаю стандартній поведінці форми (перезавантаженню сторінки)
+  event.preventDefault();
 
-  // Отримую значення полів введення для електронної пошти та пароля
   const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value.trim();
 
-  // чи заповнені обидва поля
   if (!email || !password) {
-    alert("Please enter both email and password."); //попередження, якщо поля порожні
+    alert("Please enter both email and password.");
     return;
   }
 
-  // Використовую Firebase для входу користувача
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      const user = userCredential.user; // Отримую об'єкт користувача
-      localStorage.setItem("userEmail", user.email); // Зберігаю електронну пошту у localStorage
-      window.location.href = "home.html"; //перекидую користувача на головну сторінку
+      const user = userCredential.user;
+      // Save email to localStorage for home page
+      localStorage.setItem("userEmail", user.email);
+      // Redirect to home page
+      window.location.href = "home.html";
     })
     .catch((error) => {
-      alert(`Error: ${error.message}`); // помилка, якщо щось пішло не так
+      alert(`Error: ${error.message}`);
     });
 });
