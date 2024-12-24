@@ -17,12 +17,21 @@
         document.getElementById("welcomeMessage").textContent = `Welcome, ${email}`;
       });
     }
+    // Функція для виходу
+    function logout() {
+      // Видаляю електронну пошту з localStorage
+      localStorage.removeItem("userEmail");
+      // Перенаправляю на сторінку реєстрації
+      window.location.href = "index.html";
+    }
   </script>
 </head>
+
 <body>
   <!-- Привітальне повідомлення -->
   <h1 id="welcomeMessage">Welcome, User</h1>
-  <!-- Додайте вміст вашої домашньої сторінки тут -->
+  <!-- Кнопка для виходу -->
+  <button onclick="logout()">Logout</button>
+
 </body>
 </html>
-
