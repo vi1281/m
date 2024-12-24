@@ -4,18 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Firebase Login & Registration</title>
+  <!-- Підключення файлу JavaScript для обробки авторизації -->
   <script type="module" src="auth.js"></script>
+  <!-- Підключення файлу зі стилями -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Форма для авторизації та реєстрації -->
   <form id="authForm">
+    <!-- Поле для введення імені -->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" required>
+    <br>
+    <!-- Поле для введення прізвища -->
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" required>
+    <br>
+    <!-- Поле для введення електронної пошти -->
     <label for="email">Email:</label>
     <input type="email" id="email" required>
     <br>
+    <!-- Поле для введення пароля -->
     <label for="password">Password:</label>
     <input type="password" id="password" required>
     <br>
+    <!-- Кнопка для входу -->
     <button id="login" type="button">Login</button>
+    <!-- Кнопка для реєстрації -->
     <button id="register" type="button">Register</button>
   </form>
 </body>
