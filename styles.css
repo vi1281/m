@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif; /* Шрифт для тексту */
   margin: 0; /* Відсутність зовнішніх відступів */
   padding: 0; /* Відсутність внутрішніх відступів */
-  background-color: #f4f4f4; /* Світло-сірий фон */
+  background-color: #f4f4f4; 
   display: flex; /* Використання гнучкого контейнера */
   justify-content: center; /* Центрування вмісту по горизонталі */
   align-items: center; /* Центрування вмісту по вертикалі */
@@ -12,13 +12,19 @@ body {
 
 /* Стиль заголовків */
 h1 {
-  text-align: center; /* Вирівнювання тексту по центру */
-  color: #333; /* Темно-сірий колір тексту */
+  text-align: center; 
+  color: #333; 
+}
+
+h2 {
+  margin: 50px; 
+  margin-top: 60px; /* відступ між заголовком і кнопкою */
+  text-align: center; 
 }
 
 /* Стиль форми */
 form {
-  background-color: white; /* Білий фон форми */
+  background-color: white; 
   padding: 20px; /* Внутрішні відступи */
   border-radius: 8px; /* Заокруглені краї */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
@@ -28,24 +34,24 @@ form {
 
 /* Стиль для тексту міток */
 label {
-  display: block; /* Блоковий елемент */
-  margin: 10px 0 5px; /* Зовнішні відступи зверху та знизу */
+  display: block; 
+  margin: 10px 0 5px; 
 }
 
 /* Стиль для полів введення */
 input {
-  width: 90%; /* Ширина 100% контейнера */
-  padding: 10px; /* Внутрішні відступи */
+  width: 90%; 
+  padding: 10px; 
   margin-bottom: 10px; /* Зовнішній відступ знизу */
-  border: 1px solid #ccc; /* Сіра рамка */
+  border: 1px solid #ccc; 
 }
 
 /* Стиль для кнопок */
 button {
-  width: 100%; /* Ширина 100% контейнера */
-  padding: 10px; /* Внутрішні відступи */
-  background-color: #4b45b9; /* Фон кнопки (фіолетовий) */
-  color: white; /* Білий текст */
+  width: 100%; 
+  padding: 10px; 
+  background-color: #4b45b9; 
+  color: white; 
   border: none; /* Відсутність рамки */
   border-radius: 4px; /* Заокруглені краї */
   cursor: pointer; /* Зміна курсора при наведенні */

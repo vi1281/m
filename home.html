@@ -4,34 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="stylesheet" href="styles.css">
   <script>
-    // Перевіряю, чи є електронна пошта користувача в localStorage
-    const email = localStorage.getItem("userEmail");
-
-    if (!email) {
-      // Якщо електронну пошту не знайдено, перенаправляю на сторінку входу
-      window.location.href = "index.html";
-    } else {
-      // Якщо електронна пошта знайдена, виводжу привітальне повідомлення
-      document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("welcomeMessage").textContent = `Welcome, ${email}`;
-      });
+    // Перевірка, чи є електронна пошта в localStorage
+    if (!localStorage.getItem("userEmail")) {
+      window.location.href = "index.html"; // Перенаправлення на сторінку входу, якщо немає електронної пошти
     }
+    
     // Функція для виходу
     function logout() {
-      // Видаляю електронну пошту з localStorage
       localStorage.removeItem("userEmail");
-      // Перенаправляю на сторінку реєстрації
-      window.location.href = "index.html";
+      window.location.href = "index.html"; // Перенаправлення на сторінку реєстрації
     }
+
+    // Виведення привітального повідомлення
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("welcomeMessage").textContent = `Welcome, ${localStorage.getItem("userEmail")}`;
+    });
   </script>
 </head>
-
 <body>
-  <!-- Привітальне повідомлення -->
-  <h1 id="welcomeMessage">Welcome, User</h1>
-  <!-- Кнопка для виходу -->
-  <button onclick="logout()">Logout</button>
+  <h1 id="welcomeMessage">Welcome, User </h1>
+  <h2>  <button onclick="logout()">Logout</button>
+  </h2>
 
 </body>
 </html>
