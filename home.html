@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+
   <script>
-    // Check if user email is in localStorage
+    // Перевіряю, чи є електронна пошта користувача в localStorage
     const email = localStorage.getItem("userEmail");
 
     if (!email) {
-      
-      // Redirect to login page if no email is found
+      // Якщо електронна пошта не знайдена, перенаправляю на сторінку входу
       window.location.href = "index.html";
     } else {
-      // Display email
+      // Якщо електронна пошта знайдена, вивожу повідомлення
       document.addEventListener("DOMContentLoaded", () => {
+        // Вставляємо привітальне повідомлення з електронною поштою користувача
         document.getElementById("welcomeMessage").textContent = `Welcome, ${email}`;
       });
     }
   </script>
 </head>
 <body>
-  <h1 id="welcomeMessage">Welcome, User</h1>
-  <!-- Add your home page content here -->
+  <h1 id="welcomeMessage">Welcome </h1>
 </body>
 </html>
