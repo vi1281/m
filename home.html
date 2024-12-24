@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
   <script>
-    // Check if user email is in localStorage
+    // Перевіряю, чи є електронна пошта користувача в localStorage
     const email = localStorage.getItem("userEmail");
 
     if (!email) {
-      // Redirect to login page if no email is found
+      // Якщо електронну пошту не знайдено, перенаправляю на сторінку входу
       window.location.href = "index.html";
     } else {
-      // Display email
+      // Якщо електронна пошта знайдена, виводжу привітальне повідомлення
       document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("welcomeMessage").textContent = `Welcome, ${email}`;
       });
@@ -20,7 +20,9 @@
   </script>
 </head>
 <body>
+  <!-- Привітальне повідомлення -->
   <h1 id="welcomeMessage">Welcome, User</h1>
-  <!-- Add your home page content here -->
+  <!-- Додайте вміст вашої домашньої сторінки тут -->
 </body>
 </html>
+

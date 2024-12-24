@@ -1,10 +1,11 @@
-// Get the email from localStorage
+// Отримую електронну пошту з localStorage
 const email = localStorage.getItem("userEmail");
 
-// Check if email exists
+// Перевіряю, чи існує електронна пошта
 if (email) {
+  // Якщо електронна пошта існує, вставляю її в елемент на сторінці
   document.getElementById("email").textContent = email;
 } else {
-  // Redirect to login page if no email found
+  // Якщо електронна пошта не знайдена, перенаправляю на сторінку входу
   window.location.href = "index.html";
 }
