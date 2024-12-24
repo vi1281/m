@@ -1,16 +1,16 @@
 // Імпортую необхідні модулі з Firebase
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
-// Конфігурація Firebase для підключення 
-const firebaseConfig = {
-  apiKey: "AIzaSyDD7wYR16lWYvHN6FlvZu9UpLzXW8dw5Mo", // Мій API-ключ
-  authDomain: "login-72844.firebaseapp.com", // Мій домен аутентифікації
-  projectId: "login-72844", // Мій ID проєкту
-  storageBucket: "login-72844.firebasestorage.app", // Мої налаштування сховища
-  messagingSenderId: "856995387716", 
-  appId: "1:856995387716:web:00a49160d4a84e08c29f11" // Мій ID додатка
-};
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDD7wYR16lWYvHN6FlvZu9UpLzXW8dw5Mo",
+    authDomain: "login-72844.firebaseapp.com",
+    projectId: "login-72844",
+    storageBucket: "login-72844.firebasestorage.app",
+    messagingSenderId: "856995387716",
+    appId: "1:856995387716:web:00a49160d4a84e08c29f11"
+  };
 
 // Ініціалізація Firebase додатка
 const app = initializeApp(firebaseConfig);
