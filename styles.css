@@ -1,62 +1,69 @@
+/* Загальні стилі для тіла сторінки */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif; /* Шрифт для тексту */
+  margin: 0; /* Відсутність зовнішніх відступів */
+  padding: 0; /* Відсутність внутрішніх відступів */
+  background-color: #f4f4f4; /* Світло-сірий фон */
+  display: flex; /* Використання гнучкого контейнера */
+  justify-content: center; /* Центрування вмісту по горизонталі */
+  align-items: center; /* Центрування вмісту по вертикалі */
+  height: 100vh; /* Висота сторінки на 100% вікна */
+}
+
+/* Стиль заголовків */
+h1 {
+  text-align: center; /* Вирівнювання тексту по центру */
+  color: #333; /* Темно-сірий колір тексту */
+}
+
+/* Стиль форми */
+form {
+  background-color: white; /* Білий фон форми */
+  padding: 20px; /* Внутрішні відступи */
+  border-radius: 8px; /* Заокруглені краї */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  width: 100%; /* Ширина 100% контейнера */
+  max-width: 400px; /* Максимальна ширина 400px */
+}
+
+/* Стиль для тексту міток */
+label {
+  display: block; /* Блоковий елемент */
+  margin: 10px 0 5px; /* Зовнішні відступи зверху та знизу */
+}
+
+/* Стиль для полів введення */
+input {
+  width: 100%; /* Ширина 100% контейнера */
+  padding: 10px; /* Внутрішні відступи */
+  margin-bottom: 10px; /* Зовнішній відступ знизу */
+  border-radius: 4px; /* Заокруглені краї */
+  border: 1px solid #ccc; /* Сіра рамка */
+}
+
+/* Стиль для кнопок */
+button {
+  width: 100%; /* Ширина 100% контейнера */
+  padding: 10px; /* Внутрішні відступи */
+  background-color: #4b45b9; /* Фон кнопки (фіолетовий) */
+  color: white; /* Білий текст */
+  border: none; /* Відсутність рамки */
+  border-radius: 4px; /* Заокруглені краї */
+  cursor: pointer; /* Зміна курсора при наведенні */
+}
+
+/* Ефект наведення для кнопок */
+button:hover {
+  background-color: #4b45b9; /* Трохи темніший фон кнопки */
+}
+
+/* Медіа-запит для малих екранів */
+@media (max-width: 600px) {
+  body {
+      padding: 20px; /* Додаткові відступи для малих екранів */
   }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
+
   form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+      width: 100%; /* Ширина форми 100% для адаптивності */
   }
-  
-  label {
-    display: block;
-    margin: 10px 0 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4b45b9;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #4b45b9;
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      padding: 20px;
-    }
-  
-    form {
-      width: 100%;
-    }
-  }
-  
+}
